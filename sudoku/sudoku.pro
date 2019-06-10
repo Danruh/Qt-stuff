@@ -26,10 +26,15 @@ CONFIG += c++11
 
 SOURCES += \
         main.cpp \
-        mainwindow.cpp
+        mainwindow.cpp \
+    sudokucell.cpp \
+    matrixwidget.cpp
 
 HEADERS += \
-        mainwindow.h
+        mainwindow.h \
+    sudokucell.h \
+    include_file.h \
+    matrixwidget.h
 
 FORMS += \
         mainwindow.ui

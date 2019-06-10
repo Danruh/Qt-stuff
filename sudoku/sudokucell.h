@@ -1,6 +1,9 @@
 #ifndef SUDOKUCELL_H
 #define SUDOKUCELL_H
 
+#include "include_file.h"
+
+enum Border { left_side, right_side, top_side, bottom_side };
 
 class SudokuCell : public QWidget
 {
@@ -8,9 +11,19 @@ class SudokuCell : public QWidget
 public:
     explicit SudokuCell(QWidget *parent = nullptr);
 
-signals:
-
+    void enableBorder(const Border &border);
 public slots:
+
+protected:
+    void paintEvent(QPaintEvent *event) override;
+    void mousePressEvent(QMouseEvent *event) override;
+
+private:
+    int state;
+    bool left_border_enable;
+    bool right_border_enable;
+    bool top_border_enable;
+    bool bottom_border_enable;
 };
 
 #endif // SUDOKUCELL_H
