@@ -30,7 +30,7 @@ void SudokuCell::paintEvent(QPaintEvent *event)
     QFont font;
 
     font.setPixelSize(height()/2);
-    painter.setPen(QPen(Qt::black, 2, Qt::SolidLine, Qt::RoundCap, Qt::RoundJoin));
+    painter.setPen(QPen(Qt::black, 3, Qt::SolidLine, Qt::RoundCap, Qt::RoundJoin));
     painter.setFont(font);
 
     /*

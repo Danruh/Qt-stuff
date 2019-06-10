@@ -28,13 +28,15 @@ SOURCES += \
         main.cpp \
         mainwindow.cpp \
     sudokucell.cpp \
-    matrixwidget.cpp
+    matrixwidget.cpp \
+    sudokumodel.cpp
 
 HEADERS += \
         mainwindow.h \
     sudokucell.h \
     include_file.h \
-    matrixwidget.h
+    matrixwidget.h \
+    sudokumodel.h
 
 FORMS += \
         mainwindow.ui

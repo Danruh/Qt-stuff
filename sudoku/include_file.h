@@ -3,6 +3,7 @@
 
 #endif // INCLUDE_FILE_H
 
+#include <QObject>
 #include <QWidget>
 #include <QImage>
 #include <QMainWindow>

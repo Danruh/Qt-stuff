@@ -18,3 +18,11 @@ MainWindow::~MainWindow()
 {
     delete matrix;
 }
+
+void MainWindow::resizeEvent(QResizeEvent *event)
+{
+    if ( height()==matrix->height() )
+    {
+        setMaximumWidth(matrix->width());
+    }
+}

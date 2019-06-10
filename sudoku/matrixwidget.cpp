@@ -17,19 +17,19 @@ MatrixWidget::MatrixWidget(QWidget *parent) : QWidget(parent)
             cell[i][j]->setPalette(pal);
             grid->addWidget(cell[i][j], i, j);
 
-            if ( j==2 || j==5 )
+            if ( j==2 || j==5 || j==8 )
             {
                 cell[i][j]->enableBorder(right_side);
             }
-            if ( j==3 || j==6 )
+            if ( j==0 || j==3 || j==6 )
             {
                 cell[i][j]->enableBorder(left_side);
             }
-            if ( i==2 || i==5 )
+            if ( i==2 || i==5 || i==8 )
             {
                 cell[i][j]->enableBorder(bottom_side);
             }
-            if ( i==3 || i==6 )
+            if ( i==0 || i==3 || i==6 )
             {
                 cell[i][j]->enableBorder(top_side);
             }
