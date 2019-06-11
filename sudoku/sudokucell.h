@@ -5,13 +5,13 @@
 
 enum Border { left_side, right_side, top_side, bottom_side };
 
-class SudokuCell : public QWidget
+class SudokuCell : public QFrame
 {
     Q_OBJECT
 public:
-    explicit SudokuCell(QWidget *parent = nullptr);
-
+    explicit SudokuCell(QFrame *parent = nullptr);
     void enableBorder(const Border &border);
+
 public slots:
 
 protected:
@@ -20,6 +20,7 @@ protected:
 
 private:
     int state;
+
     bool left_border_enable;
     bool right_border_enable;
     bool top_border_enable;

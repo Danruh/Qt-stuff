@@ -4,11 +4,11 @@
 #include "sudokucell.h"
 using namespace std;
 
-class MatrixWidget : public QWidget
+class MatrixWidget : public QFrame
 {
     Q_OBJECT
 public:
-    explicit MatrixWidget(QWidget *parent = nullptr);
+    explicit MatrixWidget(QFrame *parent = nullptr);
     ~MatrixWidget();
 
 signals:

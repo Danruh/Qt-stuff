@@ -1,6 +1,6 @@
 #include "sudokucell.h"
 
-SudokuCell::SudokuCell(QWidget *parent) : QWidget(parent), state(0), left_border_enable(false), right_border_enable(false), top_border_enable(false), bottom_border_enable(false)
+SudokuCell::SudokuCell(QFrame *parent) : QFrame(parent), state(0), left_border_enable(false), right_border_enable(false), top_border_enable(false), bottom_border_enable(false)
 {
     /* Empty */
 }
@@ -26,6 +26,7 @@ void SudokuCell::enableBorder(const Border &border)
 
 void SudokuCell::paintEvent(QPaintEvent *event)
 {
+    QFrame::paintEvent(event);
     QPainter painter(this);
     QFont font;
 
@@ -33,12 +34,17 @@ void SudokuCell::paintEvent(QPaintEvent *event)
     painter.setPen(QPen(Qt::black, 3, Qt::SolidLine, Qt::RoundCap, Qt::RoundJoin));
     painter.setFont(font);
 
-    /*
-    painter.drawLine(QPoint(0, 0), QPoint(width(), 0));
-    painter.drawLine(QPoint(width(), 0), QPoint(width(), height()));
-    painter.drawLine(QPoint(width(), height()), QPoint(0, height()));
-    painter.drawLine(QPoint(0, height()), QPoint(0, 0));
-    */
+    painter.setPen(QPen(Qt::black, 1, Qt::SolidLine, Qt::RoundCap, Qt::RoundJoin));
+
+    if ( state==0 )
+    {
+        painter.drawText(rect(), Qt::AlignCenter, QString(" "));
+    }
+
+    else
+    {
+        painter.drawText(rect(), Qt::AlignCenter, QString::number(state));
+    }
 
     if ( left_border_enable )
     {
@@ -59,9 +65,8 @@ void SudokuCell::paintEvent(QPaintEvent *event)
     {
         painter.drawLine(QPoint(0, height()), QPoint(width(), height()));
     }
-
-    painter.drawText(rect(), Qt::AlignCenter, QString::number(state));
 }
+
 
 void SudokuCell::mousePressEvent(QMouseEvent *event)
 {

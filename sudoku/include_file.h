@@ -5,6 +5,7 @@
 
 #include <QObject>
 #include <QWidget>
+#include <QFrame>
 #include <QImage>
 #include <QMainWindow>
 #include <QPainter>
