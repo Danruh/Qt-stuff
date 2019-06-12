@@ -43,8 +43,12 @@ MatrixWidget::MatrixWidget(QFrame *parent) : QFrame(parent)
             {
                 cell[i][j]->enableBorder(top_side);
             }
+
+            cell[i][j]->init_ID(i, j);
         }
     }
+
+    connectCells_Matrix();
     grid->setSpacing(0);
 }
 
@@ -66,9 +70,27 @@ void MatrixWidget::initCell(int i, int j, int value)
     cell[i][j]->initialiseState(value);
 }
 
+/* public slots */
+void MatrixWidget::slot_stateUpdate(const int &value, const int &i, const int &j)
+{
+    emit sig_updateModel(value, i, j);
+}
+
 void MatrixWidget::resizeEvent(QResizeEvent *event)
 {
     int newlength = qMin(width(), height());
     resize(newlength, newlength);
 }
 
+void MatrixWidget::connectCells_Matrix(void)
+{
+    int i, j;
+
+    for ( i=0;i<9;i++ )
+    {
+        for ( j=0;j<9;j++ )
+        {
+            connect(cell[i][j], &SudokuCell::sig_stateUpdate, this, &MatrixWidget::slot_stateUpdate);
+        }
+    }
+}

@@ -64,6 +64,11 @@ void MainWindow::slot_initDisplay(void)
     }
 }
 
+void MainWindow::slot_updateModel(const int &value, const int &i, const int &j)
+{
+    model->updateCell(i, j, value);
+}
+
 void MainWindow::resizeEvent(QResizeEvent *event)
 {
     if ( height()==matrix->height() )
@@ -88,7 +93,8 @@ void MainWindow::createMenus()
 
 void MainWindow::connectSig_Slot(void)
 {
-    qDebug() << "connectSig_Slot(void)";
+    /* Connect cell widgets to model */
+    connect(matrix, &MatrixWidget::sig_updateModel, this, &MainWindow::slot_updateModel);
 
     connect(model, &SudokuModel::sig_initDisplay, this, &MainWindow::slot_initDisplay);
     connect(open, &QAction::triggered, this, &MainWindow::openGrid);

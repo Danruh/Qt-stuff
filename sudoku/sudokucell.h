@@ -12,6 +12,10 @@ public:
     explicit SudokuCell(QFrame *parent = nullptr);
     void enableBorder(const Border &border);
     void initialiseState(int value);
+    void init_ID(int i_value, int j_value);
+
+signals:
+    void sig_stateUpdate(const int &value, const int &i, const int &j);
 
 public slots:
 
@@ -21,6 +25,7 @@ protected:
 
 private:
     int state;
+    int i_id, j_id;
 
     bool initialised_cell;
 

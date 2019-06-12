@@ -23,6 +23,7 @@ public slots:
     void openGrid(void);
     void saveGrid(void);
     void slot_initDisplay(void);
+    void slot_updateModel(const int &value, const int &i, const int &j);
 
 protected:
     void resizeEvent(QResizeEvent *event) override;
@@ -39,10 +40,16 @@ private:
     /* Menus */
     QMenu *fileMenu;
 
+    /* Pushbuttons */
+    QPushButton *solverButton;
+
     /* Menu actions */
     QAction *open;
     QAction *save;
     QAction *quit;
+
+    /* Dock widget actions */
+    QAction *solve;
 
     void createMenus(void);
     void connectSig_Slot(void);

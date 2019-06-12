@@ -16,6 +16,7 @@ public:
     explicit SudokuModel(QObject *parent = nullptr);
 
     void initGrid(string filename);
+    void updateCell(int i, int j, int value);
     int getCellValue(int i, int j);
 
 signals:

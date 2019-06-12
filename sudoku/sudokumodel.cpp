@@ -9,9 +9,7 @@ SudokuModel::SudokuModel(QObject *parent) : QObject(parent)
         for ( j=0;j<9;j++ )
         {
             cell[i][j] = 0;
-            cout << cell[i][j] << ' ';
         }
-        cout << endl;
     }
 }
 
@@ -26,9 +24,7 @@ void SudokuModel::initGrid(string filename)
     char num;
     int i, j;
 
-    qDebug() << "File opening";
     inputStream.open(filename);
-    qDebug() << "File opened";
 
     for ( i=0;i<9;i++ )
     {
@@ -36,14 +32,18 @@ void SudokuModel::initGrid(string filename)
         {
             inputStream >> num;
             cell[i][j] = num-'0';
-            cout << cell[i][j] << ' ';
         }
-        cout << endl;
     }
-
-    qDebug() << "File loaded";
 
     inputStream.close();
 
     emit sig_initDisplay();
 }
+
+void SudokuModel::updateCell(int i, int j, int value)
+{
+    cell[i][j] = value;
+}
+
+
+/* Public slots */

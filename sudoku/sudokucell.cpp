@@ -30,6 +30,12 @@ void SudokuCell::initialiseState(int value)
     initialised_cell = true;
 }
 
+void SudokuCell::init_ID(int i_value, int j_value)
+{
+    i_id = i_value;
+    j_id = j_value;
+}
+
 void SudokuCell::paintEvent(QPaintEvent *event)
 {
     QFrame::paintEvent(event);
@@ -98,6 +104,8 @@ void SudokuCell::mousePressEvent(QMouseEvent *event)
         {
             qDebug() << "Some other button pressed";
         }
+
+        emit sig_stateUpdate(state, i_id, j_id);
     }
     //qDebug() << "state = " << state;
     update();

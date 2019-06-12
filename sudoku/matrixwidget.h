@@ -13,8 +13,10 @@ public:
 
     void initCell(int i, int j, int value);
 signals:
+    void sig_updateModel(const int &value, const int &i, const int &j);
 
 public slots:
+    void slot_stateUpdate(const int &value, const int &i, const int &j);
 
 protected:
     void resizeEvent(QResizeEvent *event) override;
@@ -22,6 +24,8 @@ protected:
 private:
     QGridLayout *grid;
     SudokuCell *cell[9][9];
+
+    void connectCells_Matrix(void);
 };
 
 #endif // MATRIXWIDGET_H
