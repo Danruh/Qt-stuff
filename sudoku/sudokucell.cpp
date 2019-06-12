@@ -1,6 +1,6 @@
 #include "sudokucell.h"
 
-SudokuCell::SudokuCell(QFrame *parent) : QFrame(parent), state(0), left_border_enable(false), right_border_enable(false), top_border_enable(false), bottom_border_enable(false)
+SudokuCell::SudokuCell(QFrame *parent) : QFrame(parent), state(0), initialised_cell(false), left_border_enable(false), right_border_enable(false), top_border_enable(false), bottom_border_enable(false)
 {
     /* Empty */
 }
@@ -24,6 +24,12 @@ void SudokuCell::enableBorder(const Border &border)
     }
 }
 
+void SudokuCell::initialiseState(int value)
+{
+    state = value;
+    initialised_cell = true;
+}
+
 void SudokuCell::paintEvent(QPaintEvent *event)
 {
     QFrame::paintEvent(event);
@@ -31,9 +37,8 @@ void SudokuCell::paintEvent(QPaintEvent *event)
     QFont font;
 
     font.setPixelSize(height()/2);
-    painter.setPen(QPen(Qt::black, 3, Qt::SolidLine, Qt::RoundCap, Qt::RoundJoin));
-    painter.setFont(font);
 
+    painter.setFont(font);
     painter.setPen(QPen(Qt::black, 1, Qt::SolidLine, Qt::RoundCap, Qt::RoundJoin));
 
     if ( state==0 )
@@ -46,6 +51,7 @@ void SudokuCell::paintEvent(QPaintEvent *event)
         painter.drawText(rect(), Qt::AlignCenter, QString::number(state));
     }
 
+    painter.setPen(QPen(Qt::black, 3, Qt::SolidLine, Qt::RoundCap, Qt::RoundJoin));
     if ( left_border_enable )
     {
         painter.drawLine(QPoint(0, 0), QPoint(0, height()));
@@ -70,25 +76,28 @@ void SudokuCell::paintEvent(QPaintEvent *event)
 
 void SudokuCell::mousePressEvent(QMouseEvent *event)
 {
-    if ( event->button()==Qt::LeftButton )
+    if ( !initialised_cell )
     {
-        if ( ++state>9 )
+        if ( event->button()==Qt::LeftButton )
         {
-            state = 0;
+            if ( ++state>9 )
+            {
+                state = 0;
+            }
         }
-    }
 
-    else if ( event->button()==Qt::RightButton )
-    {
-        if ( --state<0 )
+        else if ( event->button()==Qt::RightButton )
         {
-            state = 9;
+            if ( --state<0 )
+            {
+                state = 9;
+            }
         }
-    }
 
-    else
-    {
-        qDebug() << "Some other button pressed";
+        else
+        {
+            qDebug() << "Some other button pressed";
+        }
     }
     //qDebug() << "state = " << state;
     update();

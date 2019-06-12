@@ -11,6 +11,7 @@ class SudokuCell : public QFrame
 public:
     explicit SudokuCell(QFrame *parent = nullptr);
     void enableBorder(const Border &border);
+    void initialiseState(int value);
 
 public slots:
 
@@ -20,6 +21,8 @@ protected:
 
 private:
     int state;
+
+    bool initialised_cell;
 
     bool left_border_enable;
     bool right_border_enable;

@@ -3,6 +3,7 @@
 
 #endif // INCLUDE_FILE_H
 
+
 #include <QObject>
 #include <QWidget>
 #include <QFrame>
@@ -13,4 +14,12 @@
 #include <QGridLayout>
 #include <QPalette>
 #include <QMouseEvent>
+#include <QAction>
+#include <QFileDialog>
+
+#include <iostream>
 #include <math.h>
+#include <string>
+#include <fstream>
+
+using namespace std;

@@ -9,8 +9,9 @@ class MatrixWidget : public QFrame
     Q_OBJECT
 public:
     explicit MatrixWidget(QFrame *parent = nullptr);
-    ~MatrixWidget();
+    ~MatrixWidget() override;
 
+    void initCell(int i, int j, int value);
 signals:
 
 public slots:

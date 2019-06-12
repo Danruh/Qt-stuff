@@ -61,6 +61,11 @@ MatrixWidget::~MatrixWidget()
     delete grid;
 }
 
+void MatrixWidget::initCell(int i, int j, int value)
+{
+    cell[i][j]->initialiseState(value);
+}
+
 void MatrixWidget::resizeEvent(QResizeEvent *event)
 {
     int newlength = qMin(width(), height());

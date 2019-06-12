@@ -15,7 +15,11 @@ class SudokuModel : public QObject
 public:
     explicit SudokuModel(QObject *parent = nullptr);
 
+    void initGrid(string filename);
+    int getCellValue(int i, int j);
+
 signals:
+    void sig_initDisplay(void);
 
 public slots:
 
