@@ -23,9 +23,12 @@ signals:
     void sig_initDisplay(void);
 
 public slots:
+    int sudokuSolver(int &lol);
 
 private:
     int cell[9][9];
+
+    int *possibleNum(int i, int j);
 };
 
 #endif // SUDOKUMODEL_H

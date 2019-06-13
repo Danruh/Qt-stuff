@@ -34,6 +34,11 @@ private:
     SudokuModel *model;
     MatrixWidget *matrix;
 
+    QWidget *centralWidget;
+
+    /* QDockWidgets */
+    QDockWidget *solverTools;
+
     /* Toolbar */
     QToolBar *toolBar;
 
@@ -53,6 +58,7 @@ private:
 
     void createMenus(void);
     void connectSig_Slot(void);
+    void initDockWidgets(void);
 };
 
 #endif // MAINWINDOW_H

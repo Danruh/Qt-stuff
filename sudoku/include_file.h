@@ -16,6 +16,8 @@
 #include <QMouseEvent>
 #include <QAction>
 #include <QFileDialog>
+#include <QPushButton>
+#include <QDockWidget>
 
 #include <iostream>
 #include <math.h>

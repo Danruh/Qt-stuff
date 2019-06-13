@@ -16,7 +16,11 @@ MainWindow::MainWindow(QWidget *parent) :
     resize(500, 500);
 
     createMenus();
+    initDockWidgets();
     connectSig_Slot();
+
+    addToolBar(toolBar);
+
 }
 
 MainWindow::~MainWindow()
@@ -24,7 +28,11 @@ MainWindow::~MainWindow()
     delete matrix;
     delete model;
 
+    delete solverButton;
     delete fileMenu;
+    delete toolBar;
+    delete solverTools;
+
     delete open;
     delete save;
     delete quit;
@@ -71,15 +79,21 @@ void MainWindow::slot_updateModel(const int &value, const int &i, const int &j)
 
 void MainWindow::resizeEvent(QResizeEvent *event)
 {
-    if ( height()==matrix->height() )
+    qDebug() << "MainWindowHeight = " << height() << " matrix->height() = " << matrix->height();
+    qDebug() << "MainWindowWidth = " << width() << " matrix->width() = " << matrix->width();
+    if ( height()==(matrix->height()+63) )
     {
-        setMaximumWidth(matrix->width());
+        setMaximumWidth( matrix->width()+158 );
+    }
+    else
+    {
+        setMaximumWidth( 16777215 );
     }
 }
 
 void MainWindow::createMenus()
 {
-    //toolBar = new QToolBar(this);
+    toolBar = addToolBar("Quick buttons");
     fileMenu = menuBar()->addMenu("File");
 
     open = new QAction("Open", this);
@@ -99,4 +113,13 @@ void MainWindow::connectSig_Slot(void)
     connect(model, &SudokuModel::sig_initDisplay, this, &MainWindow::slot_initDisplay);
     connect(open, &QAction::triggered, this, &MainWindow::openGrid);
     connect(save, &QAction::triggered, this, &MainWindow::saveGrid);
+}
+
+void MainWindow::initDockWidgets(void)
+{
+    solverTools = new QDockWidget("Solver tools", this);
+    solverButton = new QPushButton("Solve");
+    solverTools->setWidget(solverButton);
+
+    addDockWidget(Qt::RightDockWidgetArea, solverTools);
 }
