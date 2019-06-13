@@ -14,6 +14,7 @@ class SudokuModel : public QObject
     Q_OBJECT
 public:
     explicit SudokuModel(QObject *parent = nullptr);
+    ~SudokuModel() override;
 
     void initGrid(string filename);
     void updateCell(int i, int j, int value);
@@ -21,14 +22,18 @@ public:
 
 signals:
     void sig_initDisplay(void);
+    void sig_solverStateUpdate(const int &value, const int &i, const int &j);
 
 public slots:
-    int sudokuSolver(int &lol);
+    int sudokuSolver(void);
 
 private:
     int cell[9][9];
 
     int *possibleNum(int i, int j);
+    int fullGrid(void);
+    int checkCol(int i);
+    int checkRow(int j);
 };
 
 #endif // SUDOKUMODEL_H

@@ -18,6 +18,7 @@
 #include <QFileDialog>
 #include <QPushButton>
 #include <QDockWidget>
+#include <QThread>
 
 #include <iostream>
 #include <math.h>

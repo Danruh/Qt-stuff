@@ -21,8 +21,8 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_MatrixWidget_t {
-    QByteArrayData data[7];
-    char stringdata0[57];
+    QByteArrayData data[8];
+    char stringdata0[80];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -37,11 +37,12 @@ QT_MOC_LITERAL(2, 29, 0), // ""
 QT_MOC_LITERAL(3, 30, 5), // "value"
 QT_MOC_LITERAL(4, 36, 1), // "i"
 QT_MOC_LITERAL(5, 38, 1), // "j"
-QT_MOC_LITERAL(6, 40, 16) // "slot_stateUpdate"
+QT_MOC_LITERAL(6, 40, 16), // "slot_stateUpdate"
+QT_MOC_LITERAL(7, 57, 22) // "slot_solverStateUpdate"
 
     },
     "MatrixWidget\0sig_updateModel\0\0value\0"
-    "i\0j\0slot_stateUpdate"
+    "i\0j\0slot_stateUpdate\0slot_solverStateUpdate"
 };
 #undef QT_MOC_LITERAL
 
@@ -51,7 +52,7 @@ static const uint qt_meta_data_MatrixWidget[] = {
        8,       // revision
        0,       // classname
        0,    0, // classinfo
-       2,   14, // methods
+       3,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -59,15 +60,17 @@ static const uint qt_meta_data_MatrixWidget[] = {
        1,       // signalCount
 
  // signals: name, argc, parameters, tag, flags
-       1,    3,   24,    2, 0x06 /* Public */,
+       1,    3,   29,    2, 0x06 /* Public */,
 
  // slots: name, argc, parameters, tag, flags
-       6,    3,   31,    2, 0x0a /* Public */,
+       6,    3,   36,    2, 0x0a /* Public */,
+       7,    3,   43,    2, 0x0a /* Public */,
 
  // signals: parameters
     QMetaType::Void, QMetaType::Int, QMetaType::Int, QMetaType::Int,    3,    4,    5,
 
  // slots: parameters
+    QMetaType::Void, QMetaType::Int, QMetaType::Int, QMetaType::Int,    3,    4,    5,
     QMetaType::Void, QMetaType::Int, QMetaType::Int, QMetaType::Int,    3,    4,    5,
 
        0        // eod
@@ -81,6 +84,7 @@ void MatrixWidget::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id
         switch (_id) {
         case 0: _t->sig_updateModel((*reinterpret_cast< const int(*)>(_a[1])),(*reinterpret_cast< const int(*)>(_a[2])),(*reinterpret_cast< const int(*)>(_a[3]))); break;
         case 1: _t->slot_stateUpdate((*reinterpret_cast< const int(*)>(_a[1])),(*reinterpret_cast< const int(*)>(_a[2])),(*reinterpret_cast< const int(*)>(_a[3]))); break;
+        case 2: _t->slot_solverStateUpdate((*reinterpret_cast< const int(*)>(_a[1])),(*reinterpret_cast< const int(*)>(_a[2])),(*reinterpret_cast< const int(*)>(_a[3]))); break;
         default: ;
         }
     } else if (_c == QMetaObject::IndexOfMethod) {
@@ -124,13 +128,13 @@ int MatrixWidget::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 2)
+        if (_id < 3)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 2;
+        _id -= 3;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 2)
+        if (_id < 3)
             *reinterpret_cast<int*>(_a[0]) = -1;
-        _id -= 2;
+        _id -= 3;
     }
     return _id;
 }

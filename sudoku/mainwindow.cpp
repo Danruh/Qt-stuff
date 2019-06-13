@@ -19,23 +19,12 @@ MainWindow::MainWindow(QWidget *parent) :
     initDockWidgets();
     connectSig_Slot();
 
-    addToolBar(toolBar);
-
+    connect(model, &SudokuModel::sig_solverStateUpdate, matrix, &MatrixWidget::slot_solverStateUpdate);
 }
 
 MainWindow::~MainWindow()
 {
-    delete matrix;
-    delete model;
-
-    delete solverButton;
-    delete fileMenu;
-    delete toolBar;
-    delete solverTools;
-
-    delete open;
-    delete save;
-    delete quit;
+    qDebug() << "MainWindow destructor";
 }
 
 /* Public Slots
@@ -93,7 +82,7 @@ void MainWindow::resizeEvent(QResizeEvent *event)
 
 void MainWindow::createMenus()
 {
-    toolBar = addToolBar("Quick buttons");
+    //toolBar = addToolBar("Quick buttons");
     fileMenu = menuBar()->addMenu("File");
 
     open = new QAction("Open", this);
@@ -122,4 +111,6 @@ void MainWindow::initDockWidgets(void)
     solverTools->setWidget(solverButton);
 
     addDockWidget(Qt::RightDockWidgetArea, solverTools);
+
+    connect(solverButton, &QPushButton::pressed, model, &SudokuModel::sudokuSolver);
 }

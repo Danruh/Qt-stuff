@@ -36,6 +36,14 @@ void SudokuCell::init_ID(int i_value, int j_value)
     j_id = j_value;
 }
 
+void SudokuCell::solverStateUpdate(int value)
+{
+    state = value;
+    update();
+}
+
+/* public slots */
+
 void SudokuCell::paintEvent(QPaintEvent *event)
 {
     QFrame::paintEvent(event);

@@ -34,13 +34,10 @@ private:
     SudokuModel *model;
     MatrixWidget *matrix;
 
-    QWidget *centralWidget;
-
     /* QDockWidgets */
     QDockWidget *solverTools;
 
     /* Toolbar */
-    QToolBar *toolBar;
 
     /* Menus */
     QMenu *fileMenu;

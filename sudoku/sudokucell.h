@@ -13,6 +13,7 @@ public:
     void enableBorder(const Border &border);
     void initialiseState(int value);
     void init_ID(int i_value, int j_value);
+    void solverStateUpdate(int value);
 
 signals:
     void sig_stateUpdate(const int &value, const int &i, const int &j);

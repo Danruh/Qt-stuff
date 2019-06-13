@@ -76,6 +76,11 @@ void MatrixWidget::slot_stateUpdate(const int &value, const int &i, const int &j
     emit sig_updateModel(value, i, j);
 }
 
+void MatrixWidget::slot_solverStateUpdate(const int &value, const int &i, const int &j)
+{
+    cell[i][j]->solverStateUpdate(value);
+}
+
 void MatrixWidget::resizeEvent(QResizeEvent *event)
 {
     int newlength = qMin(width(), height());

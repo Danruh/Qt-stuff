@@ -298,6 +298,8 @@ release\moc_mainwindow.cpp: ..\sudoku\mainwindow.h \
 		C:\Qt\5.12.2\msvc2017\include\QtCore\qfiledevice.h \
 		C:\Qt\5.12.2\msvc2017\include\QtGui\qvector2d.h \
 		C:\Qt\5.12.2\msvc2017\include\QtGui\qtouchdevice.h \
+		C:\Qt\5.12.2\msvc2017\include\QtWidgets\QFrame \
+		C:\Qt\5.12.2\msvc2017\include\QtWidgets\qframe.h \
 		C:\Qt\5.12.2\msvc2017\include\QtGui\QImage \
 		C:\Qt\5.12.2\msvc2017\include\QtWidgets\QMainWindow \
 		C:\Qt\5.12.2\msvc2017\include\QtWidgets\qmainwindow.h \
@@ -315,8 +317,22 @@ release\moc_mainwindow.cpp: ..\sudoku\mainwindow.h \
 		C:\Qt\5.12.2\msvc2017\include\QtWidgets\qboxlayout.h \
 		C:\Qt\5.12.2\msvc2017\include\QtGui\QPalette \
 		C:\Qt\5.12.2\msvc2017\include\QtGui\QMouseEvent \
+		C:\Qt\5.12.2\msvc2017\include\QtWidgets\QAction \
+		C:\Qt\5.12.2\msvc2017\include\QtWidgets\qaction.h \
+		C:\Qt\5.12.2\msvc2017\include\QtWidgets\qactiongroup.h \
+		C:\Qt\5.12.2\msvc2017\include\QtWidgets\QFileDialog \
+		C:\Qt\5.12.2\msvc2017\include\QtWidgets\qfiledialog.h \
+		C:\Qt\5.12.2\msvc2017\include\QtCore\qdir.h \
+		C:\Qt\5.12.2\msvc2017\include\QtCore\qfileinfo.h \
+		C:\Qt\5.12.2\msvc2017\include\QtWidgets\qdialog.h \
+		C:\Qt\5.12.2\msvc2017\include\QtWidgets\QPushButton \
+		C:\Qt\5.12.2\msvc2017\include\QtWidgets\qpushbutton.h \
+		C:\Qt\5.12.2\msvc2017\include\QtWidgets\qabstractbutton.h \
+		C:\Qt\5.12.2\msvc2017\include\QtWidgets\QDockWidget \
+		C:\Qt\5.12.2\msvc2017\include\QtWidgets\qdockwidget.h \
 		..\sudoku\matrixwidget.h \
 		..\sudoku\sudokucell.h \
+		..\sudoku\sudokumodel.h \
 		release\moc_predefs.h \
 		C:\Qt\5.12.2\msvc2017\bin\moc.exe
 	C:\Qt\5.12.2\msvc2017\bin\moc.exe $(DEFINES) --compiler-flavor=msvc --include C:/Users/danru/OneDrive/Documents/Cpp_files/Qt_stuff/build-sudoku-Desktop_Qt_5_12_2_MSVC2017_32bit-Debug/release/moc_predefs.h -IC:/Qt/5.12.2/msvc2017/mkspecs/win32-msvc -IC:/Users/danru/OneDrive/Documents/Cpp_files/Qt_stuff/sudoku -IC:/Qt/5.12.2/msvc2017/include -IC:/Qt/5.12.2/msvc2017/include/QtWidgets -IC:/Qt/5.12.2/msvc2017/include/QtGui -IC:/Qt/5.12.2/msvc2017/include/QtANGLE -IC:/Qt/5.12.2/msvc2017/include/QtCore -I. -I"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.14.26428\ATLMFC\include" -I"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.14.26428\include" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\shared" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\winrt" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\cppwinrt" ..\sudoku\mainwindow.h -o release\moc_mainwindow.cpp
@@ -427,6 +443,8 @@ release\moc_sudokucell.cpp: ..\sudoku\sudokucell.h \
 		C:\Qt\5.12.2\msvc2017\include\QtCore\qfiledevice.h \
 		C:\Qt\5.12.2\msvc2017\include\QtGui\qvector2d.h \
 		C:\Qt\5.12.2\msvc2017\include\QtGui\qtouchdevice.h \
+		C:\Qt\5.12.2\msvc2017\include\QtWidgets\QFrame \
+		C:\Qt\5.12.2\msvc2017\include\QtWidgets\qframe.h \
 		C:\Qt\5.12.2\msvc2017\include\QtGui\QImage \
 		C:\Qt\5.12.2\msvc2017\include\QtWidgets\QMainWindow \
 		C:\Qt\5.12.2\msvc2017\include\QtWidgets\qmainwindow.h \
@@ -444,6 +462,19 @@ release\moc_sudokucell.cpp: ..\sudoku\sudokucell.h \
 		C:\Qt\5.12.2\msvc2017\include\QtWidgets\qboxlayout.h \
 		C:\Qt\5.12.2\msvc2017\include\QtGui\QPalette \
 		C:\Qt\5.12.2\msvc2017\include\QtGui\QMouseEvent \
+		C:\Qt\5.12.2\msvc2017\include\QtWidgets\QAction \
+		C:\Qt\5.12.2\msvc2017\include\QtWidgets\qaction.h \
+		C:\Qt\5.12.2\msvc2017\include\QtWidgets\qactiongroup.h \
+		C:\Qt\5.12.2\msvc2017\include\QtWidgets\QFileDialog \
+		C:\Qt\5.12.2\msvc2017\include\QtWidgets\qfiledialog.h \
+		C:\Qt\5.12.2\msvc2017\include\QtCore\qdir.h \
+		C:\Qt\5.12.2\msvc2017\include\QtCore\qfileinfo.h \
+		C:\Qt\5.12.2\msvc2017\include\QtWidgets\qdialog.h \
+		C:\Qt\5.12.2\msvc2017\include\QtWidgets\QPushButton \
+		C:\Qt\5.12.2\msvc2017\include\QtWidgets\qpushbutton.h \
+		C:\Qt\5.12.2\msvc2017\include\QtWidgets\qabstractbutton.h \
+		C:\Qt\5.12.2\msvc2017\include\QtWidgets\QDockWidget \
+		C:\Qt\5.12.2\msvc2017\include\QtWidgets\qdockwidget.h \
 		release\moc_predefs.h \
 		C:\Qt\5.12.2\msvc2017\bin\moc.exe
 	C:\Qt\5.12.2\msvc2017\bin\moc.exe $(DEFINES) --compiler-flavor=msvc --include C:/Users/danru/OneDrive/Documents/Cpp_files/Qt_stuff/build-sudoku-Desktop_Qt_5_12_2_MSVC2017_32bit-Debug/release/moc_predefs.h -IC:/Qt/5.12.2/msvc2017/mkspecs/win32-msvc -IC:/Users/danru/OneDrive/Documents/Cpp_files/Qt_stuff/sudoku -IC:/Qt/5.12.2/msvc2017/include -IC:/Qt/5.12.2/msvc2017/include/QtWidgets -IC:/Qt/5.12.2/msvc2017/include/QtGui -IC:/Qt/5.12.2/msvc2017/include/QtANGLE -IC:/Qt/5.12.2/msvc2017/include/QtCore -I. -I"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.14.26428\ATLMFC\include" -I"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.14.26428\include" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\shared" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\winrt" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\cppwinrt" ..\sudoku\sudokucell.h -o release\moc_sudokucell.cpp
@@ -554,6 +585,8 @@ release\moc_matrixwidget.cpp: ..\sudoku\matrixwidget.h \
 		C:\Qt\5.12.2\msvc2017\include\QtCore\qfiledevice.h \
 		C:\Qt\5.12.2\msvc2017\include\QtGui\qvector2d.h \
 		C:\Qt\5.12.2\msvc2017\include\QtGui\qtouchdevice.h \
+		C:\Qt\5.12.2\msvc2017\include\QtWidgets\QFrame \
+		C:\Qt\5.12.2\msvc2017\include\QtWidgets\qframe.h \
 		C:\Qt\5.12.2\msvc2017\include\QtGui\QImage \
 		C:\Qt\5.12.2\msvc2017\include\QtWidgets\QMainWindow \
 		C:\Qt\5.12.2\msvc2017\include\QtWidgets\qmainwindow.h \
@@ -571,6 +604,19 @@ release\moc_matrixwidget.cpp: ..\sudoku\matrixwidget.h \
 		C:\Qt\5.12.2\msvc2017\include\QtWidgets\qboxlayout.h \
 		C:\Qt\5.12.2\msvc2017\include\QtGui\QPalette \
 		C:\Qt\5.12.2\msvc2017\include\QtGui\QMouseEvent \
+		C:\Qt\5.12.2\msvc2017\include\QtWidgets\QAction \
+		C:\Qt\5.12.2\msvc2017\include\QtWidgets\qaction.h \
+		C:\Qt\5.12.2\msvc2017\include\QtWidgets\qactiongroup.h \
+		C:\Qt\5.12.2\msvc2017\include\QtWidgets\QFileDialog \
+		C:\Qt\5.12.2\msvc2017\include\QtWidgets\qfiledialog.h \
+		C:\Qt\5.12.2\msvc2017\include\QtCore\qdir.h \
+		C:\Qt\5.12.2\msvc2017\include\QtCore\qfileinfo.h \
+		C:\Qt\5.12.2\msvc2017\include\QtWidgets\qdialog.h \
+		C:\Qt\5.12.2\msvc2017\include\QtWidgets\QPushButton \
+		C:\Qt\5.12.2\msvc2017\include\QtWidgets\qpushbutton.h \
+		C:\Qt\5.12.2\msvc2017\include\QtWidgets\qabstractbutton.h \
+		C:\Qt\5.12.2\msvc2017\include\QtWidgets\QDockWidget \
+		C:\Qt\5.12.2\msvc2017\include\QtWidgets\qdockwidget.h \
 		..\sudoku\sudokucell.h \
 		release\moc_predefs.h \
 		C:\Qt\5.12.2\msvc2017\bin\moc.exe
@@ -682,6 +728,8 @@ release\moc_sudokumodel.cpp: ..\sudoku\sudokumodel.h \
 		C:\Qt\5.12.2\msvc2017\include\QtCore\qfiledevice.h \
 		C:\Qt\5.12.2\msvc2017\include\QtGui\qvector2d.h \
 		C:\Qt\5.12.2\msvc2017\include\QtGui\qtouchdevice.h \
+		C:\Qt\5.12.2\msvc2017\include\QtWidgets\QFrame \
+		C:\Qt\5.12.2\msvc2017\include\QtWidgets\qframe.h \
 		C:\Qt\5.12.2\msvc2017\include\QtGui\QImage \
 		C:\Qt\5.12.2\msvc2017\include\QtWidgets\QMainWindow \
 		C:\Qt\5.12.2\msvc2017\include\QtWidgets\qmainwindow.h \
@@ -699,6 +747,19 @@ release\moc_sudokumodel.cpp: ..\sudoku\sudokumodel.h \
 		C:\Qt\5.12.2\msvc2017\include\QtWidgets\qboxlayout.h \
 		C:\Qt\5.12.2\msvc2017\include\QtGui\QPalette \
 		C:\Qt\5.12.2\msvc2017\include\QtGui\QMouseEvent \
+		C:\Qt\5.12.2\msvc2017\include\QtWidgets\QAction \
+		C:\Qt\5.12.2\msvc2017\include\QtWidgets\qaction.h \
+		C:\Qt\5.12.2\msvc2017\include\QtWidgets\qactiongroup.h \
+		C:\Qt\5.12.2\msvc2017\include\QtWidgets\QFileDialog \
+		C:\Qt\5.12.2\msvc2017\include\QtWidgets\qfiledialog.h \
+		C:\Qt\5.12.2\msvc2017\include\QtCore\qdir.h \
+		C:\Qt\5.12.2\msvc2017\include\QtCore\qfileinfo.h \
+		C:\Qt\5.12.2\msvc2017\include\QtWidgets\qdialog.h \
+		C:\Qt\5.12.2\msvc2017\include\QtWidgets\QPushButton \
+		C:\Qt\5.12.2\msvc2017\include\QtWidgets\qpushbutton.h \
+		C:\Qt\5.12.2\msvc2017\include\QtWidgets\qabstractbutton.h \
+		C:\Qt\5.12.2\msvc2017\include\QtWidgets\QDockWidget \
+		C:\Qt\5.12.2\msvc2017\include\QtWidgets\qdockwidget.h \
 		release\moc_predefs.h \
 		C:\Qt\5.12.2\msvc2017\bin\moc.exe
 	C:\Qt\5.12.2\msvc2017\bin\moc.exe $(DEFINES) --compiler-flavor=msvc --include C:/Users/danru/OneDrive/Documents/Cpp_files/Qt_stuff/build-sudoku-Desktop_Qt_5_12_2_MSVC2017_32bit-Debug/release/moc_predefs.h -IC:/Qt/5.12.2/msvc2017/mkspecs/win32-msvc -IC:/Users/danru/OneDrive/Documents/Cpp_files/Qt_stuff/sudoku -IC:/Qt/5.12.2/msvc2017/include -IC:/Qt/5.12.2/msvc2017/include/QtWidgets -IC:/Qt/5.12.2/msvc2017/include/QtGui -IC:/Qt/5.12.2/msvc2017/include/QtANGLE -IC:/Qt/5.12.2/msvc2017/include/QtCore -I. -I"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.14.26428\ATLMFC\include" -I"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.14.26428\include" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\shared" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\winrt" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\cppwinrt" ..\sudoku\sudokumodel.h -o release\moc_sudokumodel.cpp
@@ -832,6 +893,8 @@ release\main.obj: ..\sudoku\main.cpp ..\sudoku\mainwindow.h \
 		C:\Qt\5.12.2\msvc2017\include\QtCore\qfiledevice.h \
 		C:\Qt\5.12.2\msvc2017\include\QtGui\qvector2d.h \
 		C:\Qt\5.12.2\msvc2017\include\QtGui\qtouchdevice.h \
+		C:\Qt\5.12.2\msvc2017\include\QtWidgets\QFrame \
+		C:\Qt\5.12.2\msvc2017\include\QtWidgets\qframe.h \
 		C:\Qt\5.12.2\msvc2017\include\QtGui\QImage \
 		C:\Qt\5.12.2\msvc2017\include\QtWidgets\QMainWindow \
 		C:\Qt\5.12.2\msvc2017\include\QtWidgets\qmainwindow.h \
@@ -849,8 +912,22 @@ release\main.obj: ..\sudoku\main.cpp ..\sudoku\mainwindow.h \
 		C:\Qt\5.12.2\msvc2017\include\QtWidgets\qboxlayout.h \
 		C:\Qt\5.12.2\msvc2017\include\QtGui\QPalette \
 		C:\Qt\5.12.2\msvc2017\include\QtGui\QMouseEvent \
+		C:\Qt\5.12.2\msvc2017\include\QtWidgets\QAction \
+		C:\Qt\5.12.2\msvc2017\include\QtWidgets\qaction.h \
+		C:\Qt\5.12.2\msvc2017\include\QtWidgets\qactiongroup.h \
+		C:\Qt\5.12.2\msvc2017\include\QtWidgets\QFileDialog \
+		C:\Qt\5.12.2\msvc2017\include\QtWidgets\qfiledialog.h \
+		C:\Qt\5.12.2\msvc2017\include\QtCore\qdir.h \
+		C:\Qt\5.12.2\msvc2017\include\QtCore\qfileinfo.h \
+		C:\Qt\5.12.2\msvc2017\include\QtWidgets\qdialog.h \
+		C:\Qt\5.12.2\msvc2017\include\QtWidgets\QPushButton \
+		C:\Qt\5.12.2\msvc2017\include\QtWidgets\qpushbutton.h \
+		C:\Qt\5.12.2\msvc2017\include\QtWidgets\qabstractbutton.h \
+		C:\Qt\5.12.2\msvc2017\include\QtWidgets\QDockWidget \
+		C:\Qt\5.12.2\msvc2017\include\QtWidgets\qdockwidget.h \
 		..\sudoku\matrixwidget.h \
 		..\sudoku\sudokucell.h \
+		..\sudoku\sudokumodel.h \
 		C:\Qt\5.12.2\msvc2017\include\QtWidgets\QApplication \
 		C:\Qt\5.12.2\msvc2017\include\QtWidgets\qapplication.h \
 		C:\Qt\5.12.2\msvc2017\include\QtCore\qcoreapplication.h \
@@ -965,6 +1042,8 @@ release\mainwindow.obj: ..\sudoku\mainwindow.cpp ..\sudoku\mainwindow.h \
 		C:\Qt\5.12.2\msvc2017\include\QtCore\qfiledevice.h \
 		C:\Qt\5.12.2\msvc2017\include\QtGui\qvector2d.h \
 		C:\Qt\5.12.2\msvc2017\include\QtGui\qtouchdevice.h \
+		C:\Qt\5.12.2\msvc2017\include\QtWidgets\QFrame \
+		C:\Qt\5.12.2\msvc2017\include\QtWidgets\qframe.h \
 		C:\Qt\5.12.2\msvc2017\include\QtGui\QImage \
 		C:\Qt\5.12.2\msvc2017\include\QtWidgets\QMainWindow \
 		C:\Qt\5.12.2\msvc2017\include\QtWidgets\qmainwindow.h \
@@ -982,8 +1061,22 @@ release\mainwindow.obj: ..\sudoku\mainwindow.cpp ..\sudoku\mainwindow.h \
 		C:\Qt\5.12.2\msvc2017\include\QtWidgets\qboxlayout.h \
 		C:\Qt\5.12.2\msvc2017\include\QtGui\QPalette \
 		C:\Qt\5.12.2\msvc2017\include\QtGui\QMouseEvent \
+		C:\Qt\5.12.2\msvc2017\include\QtWidgets\QAction \
+		C:\Qt\5.12.2\msvc2017\include\QtWidgets\qaction.h \
+		C:\Qt\5.12.2\msvc2017\include\QtWidgets\qactiongroup.h \
+		C:\Qt\5.12.2\msvc2017\include\QtWidgets\QFileDialog \
+		C:\Qt\5.12.2\msvc2017\include\QtWidgets\qfiledialog.h \
+		C:\Qt\5.12.2\msvc2017\include\QtCore\qdir.h \
+		C:\Qt\5.12.2\msvc2017\include\QtCore\qfileinfo.h \
+		C:\Qt\5.12.2\msvc2017\include\QtWidgets\qdialog.h \
+		C:\Qt\5.12.2\msvc2017\include\QtWidgets\QPushButton \
+		C:\Qt\5.12.2\msvc2017\include\QtWidgets\qpushbutton.h \
+		C:\Qt\5.12.2\msvc2017\include\QtWidgets\qabstractbutton.h \
+		C:\Qt\5.12.2\msvc2017\include\QtWidgets\QDockWidget \
+		C:\Qt\5.12.2\msvc2017\include\QtWidgets\qdockwidget.h \
 		..\sudoku\matrixwidget.h \
 		..\sudoku\sudokucell.h \
+		..\sudoku\sudokumodel.h \
 		ui_mainwindow.h \
 		C:\Qt\5.12.2\msvc2017\include\QtCore\QVariant \
 		C:\Qt\5.12.2\msvc2017\include\QtWidgets\QApplication \
@@ -996,8 +1089,6 @@ release\mainwindow.obj: ..\sudoku\mainwindow.cpp ..\sudoku\mainwindow.h \
 		C:\Qt\5.12.2\msvc2017\include\QtWidgets\QMenuBar \
 		C:\Qt\5.12.2\msvc2017\include\QtWidgets\qmenubar.h \
 		C:\Qt\5.12.2\msvc2017\include\QtWidgets\qmenu.h \
-		C:\Qt\5.12.2\msvc2017\include\QtWidgets\qaction.h \
-		C:\Qt\5.12.2\msvc2017\include\QtWidgets\qactiongroup.h \
 		C:\Qt\5.12.2\msvc2017\include\QtWidgets\QStatusBar \
 		C:\Qt\5.12.2\msvc2017\include\QtWidgets\qstatusbar.h \
 		C:\Qt\5.12.2\msvc2017\include\QtWidgets\QToolBar \
@@ -1109,6 +1200,8 @@ release\sudokucell.obj: ..\sudoku\sudokucell.cpp ..\sudoku\sudokucell.h \
 		C:\Qt\5.12.2\msvc2017\include\QtCore\qfiledevice.h \
 		C:\Qt\5.12.2\msvc2017\include\QtGui\qvector2d.h \
 		C:\Qt\5.12.2\msvc2017\include\QtGui\qtouchdevice.h \
+		C:\Qt\5.12.2\msvc2017\include\QtWidgets\QFrame \
+		C:\Qt\5.12.2\msvc2017\include\QtWidgets\qframe.h \
 		C:\Qt\5.12.2\msvc2017\include\QtGui\QImage \
 		C:\Qt\5.12.2\msvc2017\include\QtWidgets\QMainWindow \
 		C:\Qt\5.12.2\msvc2017\include\QtWidgets\qmainwindow.h \
@@ -1125,7 +1218,20 @@ release\sudokucell.obj: ..\sudoku\sudokucell.cpp ..\sudoku\sudokucell.h \
 		C:\Qt\5.12.2\msvc2017\include\QtWidgets\qlayoutitem.h \
 		C:\Qt\5.12.2\msvc2017\include\QtWidgets\qboxlayout.h \
 		C:\Qt\5.12.2\msvc2017\include\QtGui\QPalette \
-		C:\Qt\5.12.2\msvc2017\include\QtGui\QMouseEvent
+		C:\Qt\5.12.2\msvc2017\include\QtGui\QMouseEvent \
+		C:\Qt\5.12.2\msvc2017\include\QtWidgets\QAction \
+		C:\Qt\5.12.2\msvc2017\include\QtWidgets\qaction.h \
+		C:\Qt\5.12.2\msvc2017\include\QtWidgets\qactiongroup.h \
+		C:\Qt\5.12.2\msvc2017\include\QtWidgets\QFileDialog \
+		C:\Qt\5.12.2\msvc2017\include\QtWidgets\qfiledialog.h \
+		C:\Qt\5.12.2\msvc2017\include\QtCore\qdir.h \
+		C:\Qt\5.12.2\msvc2017\include\QtCore\qfileinfo.h \
+		C:\Qt\5.12.2\msvc2017\include\QtWidgets\qdialog.h \
+		C:\Qt\5.12.2\msvc2017\include\QtWidgets\QPushButton \
+		C:\Qt\5.12.2\msvc2017\include\QtWidgets\qpushbutton.h \
+		C:\Qt\5.12.2\msvc2017\include\QtWidgets\qabstractbutton.h \
+		C:\Qt\5.12.2\msvc2017\include\QtWidgets\QDockWidget \
+		C:\Qt\5.12.2\msvc2017\include\QtWidgets\qdockwidget.h
 
 release\matrixwidget.obj: ..\sudoku\matrixwidget.cpp ..\sudoku\matrixwidget.h \
 		..\sudoku\include_file.h \
@@ -1233,6 +1339,8 @@ release\matrixwidget.obj: ..\sudoku\matrixwidget.cpp ..\sudoku\matrixwidget.h \
 		C:\Qt\5.12.2\msvc2017\include\QtCore\qfiledevice.h \
 		C:\Qt\5.12.2\msvc2017\include\QtGui\qvector2d.h \
 		C:\Qt\5.12.2\msvc2017\include\QtGui\qtouchdevice.h \
+		C:\Qt\5.12.2\msvc2017\include\QtWidgets\QFrame \
+		C:\Qt\5.12.2\msvc2017\include\QtWidgets\qframe.h \
 		C:\Qt\5.12.2\msvc2017\include\QtGui\QImage \
 		C:\Qt\5.12.2\msvc2017\include\QtWidgets\QMainWindow \
 		C:\Qt\5.12.2\msvc2017\include\QtWidgets\qmainwindow.h \
@@ -1250,6 +1358,19 @@ release\matrixwidget.obj: ..\sudoku\matrixwidget.cpp ..\sudoku\matrixwidget.h \
 		C:\Qt\5.12.2\msvc2017\include\QtWidgets\qboxlayout.h \
 		C:\Qt\5.12.2\msvc2017\include\QtGui\QPalette \
 		C:\Qt\5.12.2\msvc2017\include\QtGui\QMouseEvent \
+		C:\Qt\5.12.2\msvc2017\include\QtWidgets\QAction \
+		C:\Qt\5.12.2\msvc2017\include\QtWidgets\qaction.h \
+		C:\Qt\5.12.2\msvc2017\include\QtWidgets\qactiongroup.h \
+		C:\Qt\5.12.2\msvc2017\include\QtWidgets\QFileDialog \
+		C:\Qt\5.12.2\msvc2017\include\QtWidgets\qfiledialog.h \
+		C:\Qt\5.12.2\msvc2017\include\QtCore\qdir.h \
+		C:\Qt\5.12.2\msvc2017\include\QtCore\qfileinfo.h \
+		C:\Qt\5.12.2\msvc2017\include\QtWidgets\qdialog.h \
+		C:\Qt\5.12.2\msvc2017\include\QtWidgets\QPushButton \
+		C:\Qt\5.12.2\msvc2017\include\QtWidgets\qpushbutton.h \
+		C:\Qt\5.12.2\msvc2017\include\QtWidgets\qabstractbutton.h \
+		C:\Qt\5.12.2\msvc2017\include\QtWidgets\QDockWidget \
+		C:\Qt\5.12.2\msvc2017\include\QtWidgets\qdockwidget.h \
 		..\sudoku\sudokucell.h
 
 release\sudokumodel.obj: ..\sudoku\sudokumodel.cpp ..\sudoku\sudokumodel.h \
@@ -1358,6 +1479,8 @@ release\sudokumodel.obj: ..\sudoku\sudokumodel.cpp ..\sudoku\sudokumodel.h \
 		C:\Qt\5.12.2\msvc2017\include\QtCore\qfiledevice.h \
 		C:\Qt\5.12.2\msvc2017\include\QtGui\qvector2d.h \
 		C:\Qt\5.12.2\msvc2017\include\QtGui\qtouchdevice.h \
+		C:\Qt\5.12.2\msvc2017\include\QtWidgets\QFrame \
+		C:\Qt\5.12.2\msvc2017\include\QtWidgets\qframe.h \
 		C:\Qt\5.12.2\msvc2017\include\QtGui\QImage \
 		C:\Qt\5.12.2\msvc2017\include\QtWidgets\QMainWindow \
 		C:\Qt\5.12.2\msvc2017\include\QtWidgets\qmainwindow.h \
@@ -1374,7 +1497,20 @@ release\sudokumodel.obj: ..\sudoku\sudokumodel.cpp ..\sudoku\sudokumodel.h \
 		C:\Qt\5.12.2\msvc2017\include\QtWidgets\qlayoutitem.h \
 		C:\Qt\5.12.2\msvc2017\include\QtWidgets\qboxlayout.h \
 		C:\Qt\5.12.2\msvc2017\include\QtGui\QPalette \
-		C:\Qt\5.12.2\msvc2017\include\QtGui\QMouseEvent
+		C:\Qt\5.12.2\msvc2017\include\QtGui\QMouseEvent \
+		C:\Qt\5.12.2\msvc2017\include\QtWidgets\QAction \
+		C:\Qt\5.12.2\msvc2017\include\QtWidgets\qaction.h \
+		C:\Qt\5.12.2\msvc2017\include\QtWidgets\qactiongroup.h \
+		C:\Qt\5.12.2\msvc2017\include\QtWidgets\QFileDialog \
+		C:\Qt\5.12.2\msvc2017\include\QtWidgets\qfiledialog.h \
+		C:\Qt\5.12.2\msvc2017\include\QtCore\qdir.h \
+		C:\Qt\5.12.2\msvc2017\include\QtCore\qfileinfo.h \
+		C:\Qt\5.12.2\msvc2017\include\QtWidgets\qdialog.h \
+		C:\Qt\5.12.2\msvc2017\include\QtWidgets\QPushButton \
+		C:\Qt\5.12.2\msvc2017\include\QtWidgets\qpushbutton.h \
+		C:\Qt\5.12.2\msvc2017\include\QtWidgets\qabstractbutton.h \
+		C:\Qt\5.12.2\msvc2017\include\QtWidgets\QDockWidget \
+		C:\Qt\5.12.2\msvc2017\include\QtWidgets\qdockwidget.h
 
 release\moc_mainwindow.obj: release\moc_mainwindow.cpp 
 
